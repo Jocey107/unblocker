@@ -3,9 +3,10 @@
 <script>
 function setIframe(){
   var website = document.getElementById("website").value;
+  if
   if(website.substring(0,8) == 'https://')
     website = website.substring(8);
-  document.getElementById("iframe").innerHTML = `<iframe is="x-frame-bypass" src="https://${website}" style="border: 0; width: 100%; height: 100%">Your browser doesnt support iFrames.</iframe>`;
+  document.getElementById("iframe").innerHTML = `<iframe src="https://${website}" style="border: 0; width: 100%; height: 100%">Your browser doesnt support iFrames.</iframe>`;
 }
 </script>
 <div id="iframe" style="position: fixed; bottom: 0; right: 0; left: 0; top: 0;">
