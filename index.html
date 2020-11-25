@@ -4,8 +4,8 @@ function setIframe(){
   document.getElementById("iframe").innerHTML = `<iframe src="https://${website}" style="border: 0; width: 100%; height: 100%">Your browser doesnt support iFrames.</iframe>`;
 }
 </script>
-<div id="iframe">
+<div id="iframe" style="margin: 0">
 <div style="text-align:center;">
-    Enter website: <input id="website" style="width: 75%; " type="text"> <button onclick="setIframe()">unblock!</button>
+    Enter website: <input id="website" style="width: 75%; " type="text" onclick="this.select()" onKeyDown="if(event.keyCode==13) setIframe();"> <button onclick="setIframe()">unblock!</button>
 </div>
 </div>
